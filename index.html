@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sharmila Katkuri - Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #e6dcf5;
+      color: #333;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background: #800080;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+    header div, header nav a {
+      color: #ffffff;
+    }
+    header nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #3e2723;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .skill-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #ffffff;
+      padding: 10px 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .skills img {
+      width: 30px;
+      height: 30px;
+    }
+    .soft-skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .soft-skill-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #ffffff;
+      padding: 10px 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .projects-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .project-card {
+      background: #fff;
+      border-radius: 12px;
+      width: 270px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+      position: relative;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 15px;
+    }
+
+    .project-title {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .project-desc {
+      font-size: 14px;
+      color: #555;
+      margin-top: 10px;
+      display: none; /* hidden by default */
+    }
+
+    .project-button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .project-button:hover {
+      background-color: #0056b3;
+    }
+    .cert-img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 10px;
+    }
+    .certificates-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .certificate-card {
+      background: #fff;
+      border-radius: 12px;
+      width: 270px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .certificate-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .certificate-button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .certificate-button:hover {
+      background-color: #1e7e34;
+    }
+
+    .certificate-image {
+      margin-top: 10px;
+      display: none;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #ffffff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    table th, table td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    table th {
+      background-color: #800080;
+      color: white;
+    }
+    a {
+      color: #800080;
+    }
+  </style>
+  <script>
+    function toggleCard(card) {
+      card.classList.toggle("open");
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <div><strong>Adiba Tamkeen</strong></div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m Adiba Tamkeen, a Business Analytics professional with a strong academic foundation in Business Administration and a specialization in Business Analytics. I am passionate about transforming raw data into meaningful insights that support strategic decision-making and drive business growth.</p>
+    <p>With hands-on experience in digital marketing and a growing focus on financial analytics, I bring both creative and analytical perspectives to my work. I am proficient in tools like Power BI, SQL, Excel, and Python, which I use to explore data, identify patterns, and solve complex problems effectively.</p>
+    <p>My approach is rooted in curiosity, structure, and precision. I thrive in organized, data-driven environments and enjoy turning numbers into stories that influence smart business strategies. Known for my adaptability, attention to detail, and clear communication, I aim to grow into a role where I can make a measurable impact by aligning business goals with analytical thinking.</p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <table>
+      <tr>
+        <th>Degree</th>
+        <th>Institution</th>
+        <th>Location</th>
+        <th>Year</th>
+        <th>CGPA</th>
+      </tr>
+      <tr>
+        <td>MBA (Business Analytics)</td>
+        <td>Anurag University</td>
+        <td>Hyderabad</td>
+        <td>2023–2025</td>
+        <td>9.49</td>
+      </tr>
+      <tr>
+        <td>BBA in Finance</td>
+        <td>Bhavans Vivekananda College</td>
+        <td>Hyderabad</td>
+        <td>2019–2022</td>
+        <td>9.34</td>
+      </tr>
+      <tr>
+        <td>Intermediate (MEC)</td>
+        <td>Little Flower Junior College</td>
+        <td>Hyderabad</td>
+        <td>2017–2019</td>
+        <td>9.93</td>
+      </tr>
+      <tr>
+        <td>SSC</td>
+        <td>IICT ZM High School</td>
+        <td>Hyderabad</td>
+        <td>2016–2017</td>
+        <td>8.8</td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="projects">
+     <h2 style="text-align:center;">Projects</h2>
+  <div class="projects-container">
+
+    <!-- Project 1 -->
+    <div class="project-card">
+      <img src="images/image1.jpg"alt="Healthcare analysis">
+      <div class="project-content">
+        <div class="project-title">Healthcare Analytics</div>
+        <button class="project-button" onclick="toggleDescription(this)">View Details</button>
+        <div class="project-desc">This project analyzes six months of data from Neelima Hospitals to improve patient care and operational efficiency, focusing on patient revisit rates as a key quality metric. It uses Python for data processing and Power BI and Tableau for visualization. The analysis covers inpatient, outpatient, and emergency departments, providing insights into resource allocation, patient satisfaction, and financial impacts. The results help stakeholders make informed decisions to enhance healthcare outcomes and optimize hospital performance.</div>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <img src="images/image2.jpg" alt="Social media analysis">
+      <div class="project-content">
+        <div class="project-title">Socialmedia Analysis</div>
+        <button class="project-button" onclick="toggleDescription(this)">View Details</button>
+        <div class="project-desc">This project analyzes the "Nationalist Hub" YouTube channel’s performance using data from YouTube Studio and tools like Power BI and Python. It highlights strong engagement from loyal subscribers but notes declining interest among younger viewers and subscriber loss from the Watch Page. India leads in viewership, while the U.S. generates higher revenue. Recommendations focus on targeting younger audiences, improving retention, and boosting monetization to drive growth.
+
+</div>
+      </div>
+    </div>
+
+
+    <!-- Project 3 -->
+    <div class="project-card">
+      <img src="images/image3.jpg" alt="RBI analysis">
+      <div class="project-content">
+        <div class="project-title">The impact of RBI on stock market indices</div>
+        <button class="project-button" onclick="toggleDescription(this)">View Details</button>
+        <div class="project-desc">This project studies the impact of RBI’s monetary policies on Indian stock indices like Nifty50, Nifty Bank, and Nifty IT. Using exploratory data analysis and historical data, it examines how repo rate changes, CRR adjustments, and policy announcements affect market trends, liquidity, and investor sentiment. The findings reveal patterns linking RBI actions to stock market behavior, helping policymakers and investors understand market reactions to monetary policy decisions.
+</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleDescription(button) {
+      const desc = button.nextElementSibling;
+      const isVisible = desc.style.display === "block";
+
+      // Hide all other descriptions
+      document.querySelectorAll(".project-desc").forEach(el => el.style.display = "none");
+      document.querySelectorAll(".project-button").forEach(btn => btn.textContent = "View Details");
+
+      if (!isVisible) {
+        desc.style.display = "block";
+        button.textContent = "Hide Details";
+      } else {
+        desc.style.display = "none";
+        button.textContent = "View Details";
+      }
+    }
+  </script>
+
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills">
+      <div class="skill-item"><img src="images/image4.png" alt="Excel"> Excel</div>
+      <div class="skill-item"><img src="images/image5.png" alt="Power BI"> Power BI</div>
+      <div class="skill-item"><img src="images/image6.png" alt="Word"> MS Word</div>
+      <div class="skill-item"><img src="images/image7.png" alt="Python"> Python</div>
+      <div class="skill-item"><img src="images/image8.png" alt="SQL"> SQL</div>
+    </div>
+  </section>
+  <section id="soft-skills">
+    <h2>Soft Skills</h2>
+    <div class="soft-skills">
+      <p>Self Motivation</p>
+      <p>Adaptability</p>
+      <p>Teamwork</p>
+      <p>Time Management</p>
+      <p>Effective Communication</p>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2 style="text-align:center;">Certificates</h2>
+  <div class="certificates-container">
+
+    <!-- Certificate 1 -->
+    <div class="certificate-card">
+      <div class="certificate-title">Python for Data Science</div>
+      <button class="certificate-button" onclick="toggleImage(this)">Certificate Image</button>
+      <img src="images/image9.jpg" alt="IBM_Certificate" class="certificate-image">
+    </div>
+
+    <!-- Certificate 2 -->
+    <div class="certificate-card">
+      <div class="certificate-title">Data Science</div>
+      <button class="certificate-button" onclick="toggleImage(this)">Certificate Image</button>
+      <img src="images/image10.jpg" alt="Datascience_Certificate" class="certificate-image">
+    </div>
+
+  </div>
+
+  <script>
+    function toggleImage(button) {
+      const img = button.nextElementSibling;
+      const isVisible = img.style.display === "block";
+
+      // Hide all others
+      document.querySelectorAll(".certificate-image").forEach(el => el.style.display = "none");
+      document.querySelectorAll(".certificate-button").forEach(btn => btn.textContent = "Certificate Image");
+
+      if (!isVisible) {
+        img.style.display = "block";
+        button.textContent = "Hide Image";
+      } else {
+        img.style.display = "none";
+        button.textContent = "Certificate Image";
+      }
+    }
+  </script>
+
+  </section>
+
+  <section id="contact">
+    <h2>Contact Information</h2>
+    <p>Email: <a href="mailto:adibatamkeen09@gmail.com">adibatamkeen09@gmail.com@gmail.com</a></p>
+    <p>LinkedIn: <a href="http://www.linkedin.com/in/adibatamkeen" target="_blank" rel="noopener noreferrer">linkedin.com/in/adibatamkeen</a></p>
+    <p>Phone: +91 9959809578</p>
+  </section>
+
+</body>
+</html>
